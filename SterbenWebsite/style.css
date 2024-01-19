@@ -1,13 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family-Raleway:400,500,800);
 
 
-/* #582BA0
+/* Spot Palette
+#582BA0
 #856E9F
 #FCEAFF
-#64BAAA 291, 100%, 96%)*/
+#64BAAA*/
 
 
 * {
+    color: #FCEAFF;
     box-sizing: border-box;
     transition: all 0.35s ease;
 }
@@ -31,12 +33,43 @@ body {
             hsl(286.54, 77.62%, 93.9%) 82.8%,
             hsl(289.67, 92.09%, 95.51%) 91%,
             hsl(291, 100%, 96.08%) 100%);
+    overflow-x: hidden;
+}
+
+.centerBody {
     display: flex;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.infoBody {
+    display: flex;
+    justify-content: center;
+    height: 160vh;
+    width: 100vw;
+}
+
+main {
+    width: 100%;
+    padding: 10%;
+}
+
+.container {
+    width: auto;
+    height: 15vh;
+    margin-bottom: 5vh;
+    background-color: white;
+    text-align: center;
+}
+
+.glass {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 /* ---- NAV BAR ----  */
@@ -66,7 +99,7 @@ nav {
     position: relative;
     display: inline-block;
     text-decoration: none;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     margin: 0;
     color: rgba(255, 255, 255, 0.5);
 }
@@ -134,16 +167,16 @@ nav {
     animation: spiral 4s linear infinite;
 }
 
- /* ---- CUSTOM CURSOR ----  */
+/* ---- CUSTOM CURSOR ----  */
 
- * {
+* {
     cursor: none;
 }
 
 .cursorDot {
     width: 7px;
     height: 7px;
-    background-color: black;
+    background-color: hsla(0, 0%, 0%, 0.4);
 }
 
 .cursorOutline {
@@ -161,4 +194,12 @@ nav {
     border-radius: 50%;
     z-index: 1;
     pointer-events: none;
+}
+
+/* ---- HACK EFFECT ----  */
+.hack {
+    text-shadow: 3px 3px 4px hsla(0, 0%, 0%, 0.8);
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-family: "Space Mono", monospace;
 }
