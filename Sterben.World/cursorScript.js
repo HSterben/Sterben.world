@@ -1,7 +1,8 @@
 const cursorDot = document.querySelector("[data-cursor-dot]");
 const cursorOutline = document.querySelector("[data-cursor-outline]");
 
-const button = document.getElementById("button1");
+var selectElements = document.getElementsByClassName("select");
+var reverseElements = document.getElementsByClassName("reverse");
 
 window.addEventListener("mousemove", function (e) {
 
@@ -25,12 +26,54 @@ window.addEventListener("mousemove", function (e) {
     }, { duration: 200, fill: "forwards" });
 });
 
-button.addEventListener("mouseenter", function (e) {
-    cursorDot.style.backgroundColor = "black";
-    cursorOutline.style.border = "2px solid hsla(0, 0%, 0%, 0.5)";
-});
+for (var i = 0; i < selectElements.length; i++) {
+    var select = selectElements[i];
 
-button.addEventListener("mouseleave", function (e) {
-    cursorDot.style.backgroundColor = "white";
-    cursorOutline.style.border = "2px solid hsla(0, 0%, 100%, 0.5)";
-});
+    select.addEventListener("mouseenter", function (e) {
+        cursorDot.animate({
+            height: '12px',
+            width: '12px',
+        }, { duration: 200, fill: "forwards" });
+    
+        cursorOutline.animate({
+            height: '69px',
+            width: '69px'
+        }, { duration: 400, fill: "forwards" });
+    });
+
+    select.addEventListener("mouseleave", function (e) {
+        cursorDot.animate({
+            height: '7px',
+            width: '7px',
+        }, { duration: 200, fill: "forwards" });
+    
+        cursorOutline.animate({
+            height: '50px',
+            width: '50px'
+        }, { duration: 400, fill: "forwards" });
+    });
+}
+
+for (var i = 0; i < reverseElements.length; i++) {
+    var reverse = reverseElements[i];
+
+    reverse.addEventListener("mouseenter", function (e) {
+        cursorDot.animate({
+            backgroundColor: 'Black'
+        }, { duration: 200, fill: "forwards" });
+    
+        cursorOutline.animate({
+            border: '2px solid hsla(0, 0%, 0%, 0.5)'
+        }, { duration: 400, fill: "forwards" });
+    });
+
+    reverse.addEventListener("mouseleave", function (e) {
+        cursorDot.animate({
+            backgroundColor: 'hsla(0, 0%, 100%, 1)'
+        }, { duration: 200, fill: "forwards" });
+    
+        cursorOutline.animate({
+            border: '2px solid hsla(0, 0%, 100%, 0.5)'
+        }, { duration: 400, fill: "forwards" });
+    });
+}
