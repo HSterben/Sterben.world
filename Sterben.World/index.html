@@ -5,24 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sterben</title>
+    <link rel="icon" type="image/png" href="Assets/moon.svg">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="/Assets/logo.png">
+    <script defer src="script.js"></script>
 </head>
 
 <body>
-    <div class="fade"></div>
     <nav>
-        <a href="index.html">
-            <div class="cube select">
-                <div id="side1"></div>
-                <div id="side2"></div>
-                <div id="side3"></div>
-                <div id="side4"></div>
-                <div id="side5"></div>
-                <div id="side6"></div>
-            </div>
-        </a>
-        <ul class="menu">
+        <img src="Assets/moon.svg" alt="" id="logo">
+        <ul id="leftNav" class="menu">
+            <li><a href="#" data-hover="Sterben" class="select">Sterben</a></li>
+        </ul>
+        <ul id="rightNav" class="menu">
             <li class="current"><a href="#" data-hover="Home" class="select">Home</a></li>
             <li><a href="#" data-hover="About Me" class="select">About Me</a></li>
             <li><a href="#" data-hover="Blog" class="select">Blog</a></li>
@@ -31,62 +25,98 @@
             <li><a href="#" data-hover="Contact" class="select">Contact</a></li>
         </ul>
     </nav>
-    
-
-    <div id="middleIndex">
-        <div id="middleIndexFade">
-            <h1 id="sterbenText">STERBEN</h1>
-            <div class="containerIndex">
-                <p> Welcome to my corner of the web! I'm Sterben, an aspiring software engineer with a passion for
-                    coding and all things tech. This website is my playground, where I delve into the world of
-                    programming, experimenting, and learning along the way.</p>
-            </div>
-            <div class="containerIndex2">
-                <p style="width:40%">Programming Proficiencies: Java, C#, HTML, CSS, JavaScript, PHP, Dart.</p>
-                <p style="width:40%">Top Development Focus: <br>Web Development, <br>Game Development, <br>Software Development.</p>
-            </div>
-            <div class="containerIndex2">
-                <p style="width:40%">Text 1<br>Example 1</p>
-                <p style="width:40%">Text 2<br>Example 2</p>
-            </div>
-            <div class="containerIndex5">
-                <div class="containerIndex3">
-                    <p style="width:40%" padding>Text 1<br>Example 1</p>
+    <div id="indexMainDesign">
+        <div class="line"></div>
+        <div class="moonFade"></div>
+    </div>
+    <h1 class="mainTitle">STERBEN</h1>
+    <div class="indexContainer1" id="firstContainer">
+        <h4>~☁ &nbsp; Personal</h4>
+        <div class="line"></div>
+        <h4> Website &nbsp; ☁~</h4>
+    </div>
+    <p style="width: 40%;">Welcome! I'm a dedicated software engineering enthusiast deeply passionate about programming
+        and technology. I thrive on creating unique, and useful projects that push the boundaries of
+        innovation.</p>
+    <div class="indexContainer1" id="secondContainer">
+        <h4>⋖~&nbsp;</h4>
+        <div class="line"></div>
+        <button class="select " onclick="redirectToWebsite()">REDIRECT</button>
+        <div class="line"></div>
+        <h4>&nbsp;~⋗</h4>
+    </div>
+    <div id="thirdContainer">
+        <ul class="lowNav">
+            <li class="hidden">
+                <!-- logo -->
+                <img src="Assets/github.svg" style="width: 3em; height: auto;">
+                <!-- Title -->
+                <h3>GitHub</h3>
+                <!-- Desc -->
+                <p>Visit My GitHub</p>
+                <p>HSterben</p>
+                <!-- Dots art -->
+                <div class="dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
                 </div>
-                <div class="containerIndex4">
-                    <p style="width:40%">Text 1<br>Example 1</p>
+            </li>
+            <li class="hidden">
+                <!-- logo -->
+                <img src="Assets/email.svg" style="width: 2.5em; height: auto; padding-top: 9%;">
+                <!-- Title -->
+                <h3>Contact Me</h3>
+                <!-- Desc -->
+                <p>Send Me A Message</p>
+                <p>OfficialSterbenX@gmail.com</p>
+                <!-- Dots art -->
+                <div class="dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
                 </div>
-            </div>
-
-        </div>
-        <div id="leftBorder"></div>
-        <div id="rightBorder"></div>
+            </li>
+            <li class="hidden">
+                <!-- logo -->
+                <img src="Assets/github.svg" style="width: 3em; height: auto;">
+                <!-- Title -->
+                <h3>GitHub</h3>
+                <!-- Desc -->
+                <p>Visit My GitHub</p>
+                <p>View My Coding Projects</p>
+                <!-- Dots art -->
+                <div class="dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </li>
+        </ul>
     </div>
-
-    <img src="Assets/PurpleFlame.gif" id="leftFlame" class="flame" draggable="false">
-    <img src="Assets/PurpleFlame.gif" id="rightFlame" class="flame" draggable="false">
-
-    <div id="leftIndex">
-        <div class="sideContent">
-            <h4>Left Side</h4>
+    <div class="indexContainer1" id="fourthContainer">
+        <div style="width: 35%;">
+            <p>Website Created By</p>
         </div>
-        <div class="sideBorder">
-            <div class="circlePing"></div>
+        <div style="width: 35%;">
+            <img src="Assets/moon.svg" class="logo" alt="">
         </div>
-    </div>
-    <div id="rightIndex">
-        <div class="sideBorder">
-
-        </div>
-        <div class="sideContent">
-            <h4>right Side</h4>
+        <div style="width: 35%;">
+            <p>Sterben, 2024</p>
         </div>
     </div>
-
+    <br>
+    <div class="line" style="width: 7%;"></div>
+    <br>
 </body>
+
 <div class="cursorDot" data-cursor-dot></div>
 <div class="cursorOutline" data-cursor-outline></div>
-
 <script src="cursorScript.js"></script>
-
 </html>
