@@ -11,14 +11,14 @@
 </head>
 
 <body>
-    <nav>
-        <img src="Assets/moon.svg" alt="" id="logo">
+    <nav id="navbar">
+        <img src="Assets/moon.svg" alt="Logo" id="logo">
         <ul id="leftNav" class="menu">
-            <li><a href="#" data-hover="Sterben" class="select">Sterben</a></li>
+            <li><a data-hover="Sterben">Sterben</a></li>
         </ul>
         <ul id="rightNav" class="menu">
             <li class="current"><a href="#" data-hover="Home" class="select">Home</a></li>
-            <li><a href="#" data-hover="About Me" class="select">About Me</a></li>
+            <li><a href="about_me.html" data-hover="About Me" class="select">About Me</a></li>
             <li><a href="#" data-hover="Blog" class="select">Blog</a></li>
             <li><a href="#" data-hover="Projects" class="select">Projects</a></li>
             <li><a href="#" data-hover="Products" class="select">Products</a></li>
@@ -49,12 +49,17 @@
         <ul class="lowNav">
             <li class="hidden">
                 <!-- logo -->
-                <img src="Assets/github.svg" style="width: 3em; height: auto;">
+                <a href="https://github.com/HSterben" target="_blank" class="select">
+                    <img src="Assets/github.svg" style="width: 3em; height: auto;">
+                </a>
                 <!-- Title -->
                 <h3>GitHub</h3>
                 <!-- Desc -->
-                <p>Visit My GitHub</p>
-                <p>HSterben</p>
+                <a href="https://github.com/HSterben" target="_blank" class="select">
+                    <p>Visit My GitHub</p>
+                    <p>HSterben</p>
+                </a>
+
                 <!-- Dots art -->
                 <div class="dots">
                     <div class="dot"></div>
@@ -66,12 +71,16 @@
             </li>
             <li class="hidden">
                 <!-- logo -->
-                <img src="Assets/email.svg" style="width: 2.5em; height: auto; padding-top: 9%;">
+                <a href="mailto:OfficialSterbenX@gmail.com" target="_blank" class="select">
+                    <img src="Assets/email.svg" style="width: 3em; height: auto;">
+                </a>
                 <!-- Title -->
                 <h3>Contact Me</h3>
                 <!-- Desc -->
-                <p>Send Me A Message</p>
-                <p>OfficialSterbenX@gmail.com</p>
+                <a href="mailto:OfficialSterbenX@gmail.com" target="_blank" class="select">
+                    <p>Send Me A Message</p>
+                    <p>OfficialSterbenX@gmail.com</p>
+                </a>
                 <!-- Dots art -->
                 <div class="dots">
                     <div class="dot"></div>
@@ -83,12 +92,14 @@
             </li>
             <li class="hidden">
                 <!-- logo -->
-                <img src="Assets/github.svg" style="width: 3em; height: auto;">
+                <img src="Assets/tools.svg" style="width: 3em; height: auto;" class="select">
                 <!-- Title -->
-                <h3>GitHub</h3>
+                <h3>Work In Progress</h3>
                 <!-- Desc -->
-                <p>Visit My GitHub</p>
-                <p>View My Coding Projects</p>
+                <a>
+                    <p>Currently Working</p>
+                    <p>Blog Website</p>
+                </a>
                 <!-- Dots art -->
                 <div class="dots">
                     <div class="dot"></div>
@@ -119,4 +130,5 @@
 <div class="cursorDot" data-cursor-dot></div>
 <div class="cursorOutline" data-cursor-outline></div>
 <script src="cursorScript.js"></script>
+
 </html>
