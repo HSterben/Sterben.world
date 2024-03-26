@@ -1,0 +1,150 @@
+#firstContainer {
+    width: 20%;
+    margin-top: 3%;
+}
+
+#secondContainer {
+    width: 45%;
+    margin-bottom: 3%;
+    margin-top: 2%;
+}
+
+#thirdContainer {
+    width: 80%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+#fourthContainer {
+    margin-bottom: 2%;
+    width: 30%;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #6C5689;
+}
+
+.lowNav li a {
+    text-decoration: none;
+    color: white;
+}
+
+.lowNav li p {
+    margin-bottom: 5%;
+    margin-top: 0;
+}
+
+.lowNav li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+
+.lowNav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    padding: 0;
+}
+
+/* SCROLL ANIMATIONS */
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(25%);
+    transition: all 0.5s;
+}
+
+.hidden:nth-child(1) {
+    transition-delay: 100ms;
+}
+
+.hidden:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.hidden:nth-child(3) {
+    transition-delay: 300ms;
+}
+
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+/* DOTS ART */
+.dots {
+    margin-top: 35%;
+    --uib-size: 3em;
+    --uib-color: white;
+    --uib-speed: 3s;
+    --uib-dot-size: calc(var(--uib-size) * 0.18);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: var(--uib-size);
+    height: var(--uib-dot-size);
+}
+
+.dot {
+    position: absolute;
+    top: calc(50% - var(--uib-dot-size) / 2);
+    left: calc(0px - var(--uib-dot-size) / 2);
+    display: block;
+    height: var(--uib-dot-size);
+    width: var(--uib-dot-size);
+    border-radius: 50%;
+    background-color: var(--uib-color);
+    animation: stream var(--uib-speed) linear infinite both;
+    transition: background-color 0.3s ease;
+}
+
+.dot:nth-child(2) {
+    animation-delay: calc(var(--uib-speed) * -0.2);
+}
+
+.dot:nth-child(3) {
+    animation-delay: calc(var(--uib-speed) * -0.4);
+}
+
+.dot:nth-child(4) {
+    animation-delay: calc(var(--uib-speed) * -0.6);
+}
+
+.dot:nth-child(5) {
+    animation-delay: calc(var(--uib-speed) * -0.8);
+}
+
+@keyframes stream {
+
+    0%,
+    100% {
+        transform: translateX(0) scale(0);
+    }
+
+    50% {
+        transform: translateX(calc(var(--uib-size) * 0.5)) scale(1);
+    }
+
+    99.999% {
+        transform: translateX(calc(var(--uib-size))) scale(0);
+    }
+}

@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-y: hidden;
+}
+
+.ABContainer {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    color: white;
+    text-align: center;
+}
+
+section p {
+    width: 40%;
+}
+
+h1{
+    color: white;
+    text-shadow: 1px 1px 4px black;
+}
