@@ -9,7 +9,6 @@ body {
 }
 
 .moonFade {
-    margin-top: -5%;
     margin-bottom: 5%;
 }
 
@@ -25,7 +24,7 @@ body {
     align-items: center;
     justify-content: space-evenly;
     width: 45%;
-    margin-top: 5%;
+    margin-top: 10%;
     color: #6C5689;
 }
 
@@ -59,7 +58,7 @@ h1:before {
     top: -1px;
     right: -1px;
     height: 50%;
-    width: 50%;
+    width: 35%;
     transition: 0.5s ease-in-out;
     border-top: 2px solid #fff;
     border-right: 2px solid #fff;
@@ -67,7 +66,7 @@ h1:before {
 
 h1:hover:before {
     width: 70%;
-    height: 60%;
+    height: 70%;
 }
 
 h1:after {
@@ -76,7 +75,7 @@ h1:after {
     bottom: -1px;
     left: -1px;
     height: 50%;
-    width: 50%;
+    width: 35%;
     transition: 0.5s ease-in-out;
     border-bottom: 2px solid #fff;
     border-left: 2px solid #fff;
@@ -84,7 +83,7 @@ h1:after {
 
 h1:hover:after {
     width: 70%;
-    height: 60%;
+    height: 70%;
 }
 
 p {
