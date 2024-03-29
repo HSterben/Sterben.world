@@ -92,6 +92,7 @@ button {
     transform: translateY(25%);
     transition: all 0.5s;
 }
+
 .show {
     opacity: 1;
     filter: blur(0);
@@ -115,7 +116,6 @@ button {
         transition: none;
     }
 }
-
 
 /* DOTS ART */
 .dots {

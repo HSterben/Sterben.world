@@ -8,6 +8,11 @@ body {
     overflow-y: hidden;
 }
 
+.moonFade {
+    margin-top: -5%;
+    margin-bottom: 5%;
+}
+
 .container {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
@@ -17,6 +22,11 @@ body {
 .container2 {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 45%;
+    margin-top: 5%;
+    color: #6C5689;
 }
 
 section {
@@ -35,9 +45,46 @@ section p {
 }
 
 h1 {
+    position: relative;
+    display: inline-block;
     color: white;
+    padding: 35px 50px;
     text-shadow: 1px 1px 4px black;
-    font-size: 4.5em;
+    font-size: 8em;
+}
+
+h1:before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    height: 50%;
+    width: 50%;
+    transition: 0.5s ease-in-out;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+
+h1:hover:before {
+    width: 70%;
+    height: 60%;
+}
+
+h1:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    height: 50%;
+    width: 50%;
+    transition: 0.5s ease-in-out;
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+}
+
+h1:hover:after {
+    width: 70%;
+    height: 60%;
 }
 
 p {
